@@ -1,0 +1,22 @@
+<nav class="header-menu navbar navbar-expand-lg navbar-light bg-primary">
+  <ul class="header-menu__list">
+    <li class="header-menu__item btn btn-secondary">Animals</li>
+    <li class="header-menu__item btn btn-secondary">Car</li>
+  </ul>
+
+  <div> Hello, {{userName}}</div>
+
+  <form class="form-inline my-2 my-lg-0" onsubmit="return false;">
+    <input
+      class="form-control mr-sm-2"
+      type="text"
+      [value]="userName"
+      placeholder="Search"
+    >
+    <button
+      class="btn btn-secondary my-2 my-sm-0"
+      type="submit"
+      (click)="addUser(userName)"
+    >Search</button>
+  </form>
+</nav>

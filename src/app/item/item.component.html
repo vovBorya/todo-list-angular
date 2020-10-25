@@ -1,0 +1,22 @@
+<li
+  class="list-group-item d-flex justify-content-between align-items-center"
+
+  [ngClass]="{'bold-item': item.isImportant}"
+  [ngStyle]="item.isDone && {'text-decoration': 'line-through'}"
+>
+  {{item.label}}
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button
+      class="btn btn-success"
+      (click)="setDoneItem.emit(item)"
+    >Done</button>
+    <button
+      class="btn btn-primary"
+      (click)="setImportantItem.emit(item)"
+    >Important</button>
+    <button
+      class="btn btn-danger"
+      (click)="deleteItem.emit(item)"
+    >Delete</button>
+  </div>
+</li>

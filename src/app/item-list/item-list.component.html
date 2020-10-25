@@ -1,0 +1,24 @@
+<div class="d-flex mb-2">
+  <input
+    class="form-control mr-sm-2"
+    type="text"
+    [(ngModel)]="inputValue"
+    placeholder="Enter item name"
+  >
+  <button
+    class="btn btn-secondary my-2 my-sm-0"
+    type="submit"
+    [disabled]="!inputValue"
+    (click)="addItem()"
+  >Add</button>
+</div>
+<div *ngIf="inputValue" class="my-2"><b>New Item:</b> {{inputValue}}</div>
+<ul class="list-group">
+  <app-item
+    *ngFor="let item of itemList"
+    [item]="item"
+    (deleteItem)="handleDeleteItem(item)"
+    (setDoneItem)="handleSetDone(item)"
+    (setImportantItem)="handleImportantDone(item)"
+  ></app-item>
+</ul>

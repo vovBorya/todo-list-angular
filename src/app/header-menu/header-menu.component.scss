@@ -1,0 +1,20 @@
+.header-menu {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    padding: 10px;
+    margin: 0;
+  }
+
+  &__item {
+    font-size: 20px;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    list-style-type: none;
+    cursor: pointer;
+  }
+}
+
