@@ -1,4 +1,8 @@
-.bold-item {
+.important-item {
   font-weight: 1000;
   color: cornflowerblue;
+}
+
+.done-item {
+  text-decoration: line-through;
 }

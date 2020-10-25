@@ -45,7 +45,9 @@ export class ItemListComponent implements OnInit {
     ];
   }
 
-  handleImportantDone(item: IItem): void {
+  handleSetImportant(item: IItem): void {
+    console.log('Set IMPORTANT');
+    
     const itemIndex = this.itemList.indexOf(item);
     const oldItem = this.itemList[itemIndex];
     const newItem = {
@@ -57,5 +59,7 @@ export class ItemListComponent implements OnInit {
       newItem,
       ...this.itemList.slice(itemIndex + 1)
     ];
+    console.log("item list >>>", this.itemList);
+    
   }
 }

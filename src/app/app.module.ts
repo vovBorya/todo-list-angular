@@ -7,13 +7,15 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { ItemComponent } from './item/item.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import {FormsModule} from '@angular/forms';
+import { ZoomDirective } from './item/zoom-directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemListComponent,
     ItemComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    ZoomDirective
   ],
   imports: [
     BrowserModule,
