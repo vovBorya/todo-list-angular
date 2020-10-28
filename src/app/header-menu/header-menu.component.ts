@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-menu.component.scss']
 })
 export class HeaderMenuComponent implements OnInit {
-  userName = 'Vova';
+  inputValue: string;
 
   constructor() { }
 
@@ -14,7 +14,7 @@ export class HeaderMenuComponent implements OnInit {
     console.log('Header menu init');
   }
 
-  addUser(userName: string): void {
-    console.log('userName', userName);
+  cleanUserName(): void {
+    this.inputValue = '';
   }
 }

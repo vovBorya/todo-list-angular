@@ -8,6 +8,7 @@ import { ItemComponent } from './item/item.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import {FormsModule} from '@angular/forms';
 import { ZoomDirective } from './item/zoom-directive';
+import {FormatButtonLabelPipe} from './format-button-label.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ZoomDirective } from './item/zoom-directive';
     ItemListComponent,
     ItemComponent,
     HeaderMenuComponent,
-    ZoomDirective
+    ZoomDirective,
+    FormatButtonLabelPipe
   ],
   imports: [
     BrowserModule,

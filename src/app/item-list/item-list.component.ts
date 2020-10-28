@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {IItem} from '../item/item.component';
+import {Component, Input, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {IItem, ItemComponent} from '../item/item.component';
 
 @Component({
   selector: 'app-item-list',
@@ -7,8 +7,16 @@ import {IItem} from '../item/item.component';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
+  @Input() itemListLabel: TemplateRef<any>;
+
   inputValue: string;
-  itemList = [];
+  itemList = [{
+    label: 'Drink tea',
+    isDone: false,
+    isImportant: false,
+    createAt: new Date(),
+    progress: 0.5,
+  }];
 
   constructor() { }
 
@@ -20,7 +28,9 @@ export class ItemListComponent implements OnInit {
     this.itemList.push({
       label: this.inputValue,
       isDone: false,
-      isImportant: false
+      isImportant: false,
+      createAt: new Date(),
+      progress: 0.55
     });
     this.inputValue = '';
   }
@@ -32,6 +42,7 @@ export class ItemListComponent implements OnInit {
   }
 
   handleSetDone(item: IItem): void {
+    console.log('Set DONE item >>>', item);
     const itemIndex = this.itemList.indexOf(item);
     const oldItem = this.itemList[itemIndex];
     const newItem = {
@@ -46,8 +57,8 @@ export class ItemListComponent implements OnInit {
   }
 
   handleSetImportant(item: IItem): void {
-    console.log('Set IMPORTANT');
-    
+    console.log('Set IMPORTANT item >>>', item);
+
     const itemIndex = this.itemList.indexOf(item);
     const oldItem = this.itemList[itemIndex];
     const newItem = {
@@ -59,7 +70,6 @@ export class ItemListComponent implements OnInit {
       newItem,
       ...this.itemList.slice(itemIndex + 1)
     ];
-    console.log("item list >>>", this.itemList);
-    
+
   }
 }

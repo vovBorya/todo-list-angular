@@ -4,6 +4,8 @@ export interface IItem {
   label: string;
   isDone: boolean;
   isImportant: boolean;
+  createAt: Date;
+  progress: number;
 }
 
 @Component({
@@ -20,6 +22,10 @@ export class ItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  foo = () => {
+    console.log('item.label', this.item.label);
   }
 
 }

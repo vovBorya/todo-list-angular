@@ -1,20 +1,22 @@
 <nav class="header-menu navbar navbar-expand-lg navbar-light bg-primary">
 
-  <h4>Todo list</h4>
+  <ng-content></ng-content>
 
-  <div> Hello, {{userName}}</div>
+  <div> Hello, {{inputValue}}</div>
 
-  <form class="form-inline my-2 my-lg-0" onsubmit="return false;">
+<!--  <form class="form-inline my-2 my-lg-0" onsubmit="return false;">-->
+  <div class="search-box">
     <input
       class="form-control mr-sm-2"
       type="text"
-      [value]="userName"
-      placeholder="Search"
+      [(ngModel)]="inputValue"
+      placeholder="User name"
+      placeholder="User name"
     >
     <button
       class="btn btn-secondary my-2 my-sm-0"
       type="submit"
-      (click)="addUser(userName)"
-    >Search</button>
-  </form>
+    >Add</button>
+  </div>
+<!--  </form>-->
 </nav>
