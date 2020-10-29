@@ -1,3 +1,7 @@
+# LAB_1: https://awesome-hawking-48b0e3.netlify.app/
+# LAB_2: https://sad-bassi-0e0413.netlify.app/
+
+
 # FirstProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
