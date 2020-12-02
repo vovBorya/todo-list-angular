@@ -2,20 +2,24 @@
   <!--Label-->
   <h4>Todo list</h4>
 </app-header-menu>
-<button class="btn btn-secondary m-3" (click)="headerRef.cleanUserName()">Clean user name</button>
 <div class="p-3">
   <div class="jumbotron col-12">
     <app-item-list
-      [itemListLabel]="itemListLabel"
       #userName
     ></app-item-list>
   </div>
-
-  <div #userName>My User name</div>
-  <div>{{userName.textContent}}</div>
 </div>
 
-<ng-template #itemListLabel>
-  <h4 class="text-center mb-4">Tasks for life</h4>
-</ng-template>
+<div class="p-3 mt-5">
+  <div class="jumbotron col-12">
+    <app-react-form></app-react-form>
+  </div>
+</div>
+
+<div class="p-3 mt-5">
+  <div class="jumbotron col-12">
+    <app-table></app-table>
+  </div>
+</div>
+
 

@@ -7,7 +7,6 @@ import {IItem, ItemComponent} from '../item/item.component';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
-  @Input() itemListLabel: TemplateRef<any>;
 
   inputValue: string;
   itemList = [{

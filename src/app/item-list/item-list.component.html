@@ -1,14 +1,10 @@
-<ng-container *ngTemplateOutlet="itemListLabel"></ng-container>
 <div class="d-flex mb-2">
-  <input
-    class="form-control mr-sm-2"
-    type="text"
-    [(ngModel)]="inputValue"
-    placeholder="Enter item name"
-  >
+  <mat-form-field class="example-full-width">
+    <mat-label>New task</mat-label>
+    <input matInput placeholder="Enter item name" [(ngModel)]="inputValue">
+  </mat-form-field>
   <button
-    class="btn btn-secondary my-2 my-sm-0"
-    type="submit"
+    mat-raised-button
     [disabled]="!inputValue"
     (click)="addItem()"
   >Add</button>
